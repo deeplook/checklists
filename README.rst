@@ -22,6 +22,8 @@ systems' faults.
 
 At the moment you can find here only a few notes which might turn
 into some documentation project based on Sphinx, or some kind of forms
-on some website or a mobile app. 
+on some website or a mobile app. In fact, there is one prototype web
+application for using a checklist-style approach for surveys in a
+folder named ``examples/checklist_survey``.
 
 More to come...
