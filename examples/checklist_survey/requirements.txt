@@ -1,0 +1,4 @@
+flask
+flask-appconfig
+flask-bootstrap
+six

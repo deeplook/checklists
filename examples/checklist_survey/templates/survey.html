@@ -1,0 +1,106 @@
+{# survey-toggles.html #}
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% import "bootstrap/fixes.html" as fixes %}
+
+{% block title %}Surveys{% endblock %}
+
+{% block navbar %}
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" 
+                  data-toggle="collapse" data-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Checklist-Surveys</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="#about">About</a></li>
+            <li class="active"><a href="/surveys">Surveys</a></li>
+            <li><a href="/results">Results</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="starter-template">
+    <h1>{{ survey['title'] }}</h1>
+    <h2>{{ survey['description'] }}</h2>
+    <style>
+      .slow .toggle-group { transition: left 0.7s; -webkit-transition: left 0.7s; }
+      .fast .toggle-group { transition: left 0.1s; -webkit-transition: left 0.1s; }
+      .quick .toggle-group { transition: none; -webkit-transition: none; }
+    </style>
+    <!--form method="post" class="form" role="form" action="/success" -->
+    <form method="post" class="form" role="form" action="/results/{{ survey['id'] }}">
+      {% for sec in survey['sections'] %}
+      <h3>{{ sec['title'] }}</h3>
+      <p>{{ sec['description'] }}</p>
+      <div>
+      {% for name in sec['items'] %}
+        <input type="checkbox" name="{{ sec['category'] }}:{{ name }}" data-toggle="toggle"
+               data-on="{{ name }}" data-off="{{ name }}" data-style="fast">
+  	  {% endfor %}
+      {% if extended %}
+        <input type="text" class="form-control" name="{{ sec['category'] }}:other"
+               placeholder="enter other stuff here using spaces"/>
+      {% endif %}
+      </div>
+     {% endfor %}
+      <br>
+      <div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+      {% if not extended %}
+      <div>
+        <br/>
+        <a href="/surveys/{{ survey['id'] }}?extended=True" 
+           class="btn btn-info" role="button">Extended Checklist</a>
+      </div>
+      {% else %}
+      <div>
+        <br/>
+        <a href="/surveys/{{ survey['id'] }}" 
+           class="btn btn-info" role="button">Reduced Checklist</a>
+      </div>
+      {% endif %}
+    </form>
+  </div>
+</div>
+<script src="{{ url_for('static', filename='js/bootstrap-toggle.js') }}"></script>
+{% endblock %}
+
+{% block head %}
+{{super()}}
+{{fixes.ie8()}}
+<style>
+  body { padding-top: 70px; }
+</style>
+<script>
+  if (window.location.href.indexOf('minhur.github.io') > 0) window.location.replace('http://www.bootstraptoggle.com')
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="msvalidate.01" content="3638AEFC99423BA5CB586805286C39AA" />
+<meta name="description" content="..." />
+<meta name="keywords" content="..." />
+<meta name="author" content="metatags generator">
+<meta name="robots" content="index, follow">
+<meta name="revisit-after" content="1 month">
+<link rel="canonical" href="http://www.bootstraptoggle.com">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.3/styles/github.min.css" rel="stylesheet" >
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="{{ url_for('static', filename='css/bootstrap-toggle.css') }}" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+{% endblock %}

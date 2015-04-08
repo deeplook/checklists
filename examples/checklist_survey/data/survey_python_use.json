@@ -1,0 +1,212 @@
+{
+    "id": "python_use", 
+    "title": "Survey",
+    "description": "Which Python-Centered Software Tools Do You Use?", 
+    "sections": [
+        {
+            "category": "py.impl", 
+            "items": [
+                "cpython", 
+                "cython", 
+                "ironpython", 
+                "jython", 
+                "mypy", 
+                "psyco", 
+                "pypy", 
+                "pyret", 
+                "rpython", 
+                "stackless"
+            ], 
+            "description": "Not included are distributions like Anaconda or Canopy.", 
+            "title": "Python Implementations"
+        }, 
+        {
+            "category": "py.dev", 
+            "items": [
+                "2to3", 
+                "autopep8", 
+                "bumpversion", 
+                "coverage", 
+                "future", 
+                "hunter", 
+                "logging", 
+                "pep8ify", 
+                "pyflakes", 
+                "pylint", 
+                "pyminifier", 
+                "scales", 
+                "six", 
+                "warnings", 
+                "yapf"
+            ], 
+            "description": "", 
+            "title": "Development"
+        }, 
+        {
+            "category": "py.stdlib", 
+            "items": [
+                "plistlib", 
+                "readline"
+            ], 
+            "description": "", 
+            "title": "Standard Library Goodies"
+        }, 
+        {
+            "category": "py.external", 
+            "items": [
+                "authomatic", 
+                "dateutil", 
+                "docopt", 
+                "isodate", 
+                "lxml", 
+                "pillow", 
+                "psutil", 
+                "scapy", 
+                "scrapy", 
+                "sqlalchemy", 
+                "requests", 
+                "unicode", 
+                "urllib3"
+            ], 
+            "description": "", 
+            "title": "3rd Party Utilities"
+        }, 
+        {
+            "category": "py.test", 
+            "items": [
+                "behave", 
+                "detox", 
+                "doctest", 
+                "lettuce", 
+                "mock", 
+                "nose", 
+                "print", 
+                "pytest", 
+                "testmon", 
+                "tox", 
+                "unittest"
+            ], 
+            "description": "", 
+            "title": "Testing"
+        }, 
+        {
+            "category": "py.pkg", 
+            "items": [
+                "conda", 
+                "devpi", 
+                "distribute", 
+                "distutils", 
+                "pip", 
+                "pipsi", 
+                "setuptools", 
+                "wheel", 
+                "yolk"
+            ], 
+            "description": "", 
+            "title": "Packaging"
+        }, 
+        {
+            "category": "py.dep", 
+            "items": [
+                "ansible", 
+                "batou", 
+                "buildbot", 
+                "buildout", 
+                "execnet", 
+                "fabric", 
+                "salt", 
+                "yadt"
+            ], 
+            "refs": [
+                "https://code.activestate.com/pypm/search:deployment/"
+            ], 
+            "description": "", 
+            "title": "Deployment"
+        }, 
+        {
+            "category": "py.doc", 
+            "items": [
+                "asciidoc", 
+                "babel", 
+                "docutils", 
+                "doxygen", 
+                "gettext", 
+                "pandoc", 
+                "pydoc", 
+                "sphinx"
+            ], 
+            "description": "", 
+            "title": "Documentation"
+        }, 
+        {
+            "category": "py.datasci", 
+            "items": [
+                "bashplotlib", 
+                "blaze", 
+                "bokeh", 
+                "gnuplot", 
+                "graphviz", 
+                "jupyter", 
+                "matplotlib", 
+                "numba", 
+                "numpy", 
+                "pandas", 
+                "plotly", 
+                "scikit-learn", 
+                "scipy", 
+                "seaborn", 
+                "theano"
+            ], 
+            "description": "General tools and packages applicable to all sciences.", 
+            "title": "Data Science"
+        }, 
+        {
+            "category": "db", 
+            "items": [
+                "cassandra", 
+                "codernitydb", 
+                "couchdb", 
+                "crate", 
+                "db2", 
+                "durus", 
+                "elasticsearch", 
+                "foundationdb", 
+                "hadoop", 
+                "influxdb", 
+                "informix", 
+                "mariadb", 
+                "memcached", 
+                "mongodb", 
+                "mysql", 
+                "neo4j", 
+                "parstream", 
+                "postgres", 
+                "redis", 
+                "sqlite3", 
+                "zodb"
+            ], 
+            "description": "Databases with Python interfaces.", 
+            "title": "Databases"
+        }, 
+        {
+            "category": "web", 
+            "items": [
+                "bottle", 
+                "flask", 
+                "django", 
+                "pylons", 
+                "pyramid", 
+                "tornado", 
+                "turbogears", 
+                "twisted", 
+                "web2py", 
+                "zope"
+            ], 
+            "refs": [
+                "https://wiki.python.org/moin/WebFrameworks"
+            ], 
+            "description": "", 
+            "title": "Webframeworks"
+        }
+    ]
+}

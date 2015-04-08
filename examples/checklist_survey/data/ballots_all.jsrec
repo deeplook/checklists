@@ -1,0 +1,6 @@
+{"ip": "127.0.0.1", "selection": {"py.impl": ["cython", "cpython"]}, "id": "python_use", "datetime": "2015-04-08T22:45:20.978210"}
+{"ip": "127.0.0.1", "selection": {"py.dev": ["autopep8"]}, "id": "python_use", "datetime": "2015-04-08T22:47:40.758982"}
+{"ip": "127.0.0.1", "selection": {}, "id": "python_use", "datetime": "2015-04-08T22:47:52.051324"}
+{"ip": "127.0.0.1", "selection": {}, "id": "python_use", "datetime": "2015-04-08T22:47:56.017498"}
+{"ip": "127.0.0.1", "selection": {}, "id": "python_use", "datetime": "2015-04-08T22:51:31.215962"}
+{"ip": "127.0.0.1", "selection": {}, "id": "python_use", "datetime": "2015-04-08T22:57:38.626411"}
